@@ -1,0 +1,79 @@
+
+<!--index.wxml-->
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:362rpx" bindchange="bindChange">
+
+  <!-- 我是哈哈 -->
+  <swiper-item>
+    <view class="page__bd">
+      <view class="weui-grids">
+        <block wx:for-items="{{grids}}" wx:key="{{index}}">
+          <view class="weui-grid" hover-class="weui-grid_active" data-index="{{index}}" data-id="{{0}}" bindtap="click">
+            <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
+            <view class="weui-grid__label">{{'哈哈-' + index}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </swiper-item>
+
+  <!-- 我是呵呵 -->
+  <swiper-item>
+    <view class="page__bd">
+      <view class="weui-grids">
+        <block wx:for-items="{{grids}}" wx:key="{{index}}">
+          <view class="weui-grid" hover-class="weui-grid_active" data-index="{{index}}" data-id="{{1}}" bindtap="click">
+            <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
+            <view class="weui-grid__label">{{'呵呵-' + index}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </swiper-item>
+
+  <!-- 我是嘿嘿 -->
+  <swiper-item>
+    <view class="page__bd">
+      <view class="weui-grids">
+        <block wx:for-items="{{grids}}" wx:key="{{index}}">
+          <view class="weui-grid" hover-class="weui-grid_active" data-index="{{index}}" data-id="{{2}}" bindtap="click">
+            <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
+            <view class="weui-grid__label">{{'嘿嘿-' + index}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </swiper-item>
+
+  <!-- 我是哼哼-->
+  <swiper-item>
+    <view class="page__bd">
+      <view class="weui-grids">
+        <block wx:for-items="{{grids}}" wx:key="{{index}}">
+          <view class="weui-grid" hover-class="weui-grid_active" data-index="{{index}}" data-id="{{3}}" bindtap="click">
+            <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
+            <view class="weui-grid__label">{{'哼哼-' + index}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </swiper-item>
+
+  <!-- 我是吼吼 -->
+  <swiper-item>
+    <view class="page__bd">
+      <view class="weui-grids">
+        <block wx:for-items="{{grids}}" wx:key="{{index}}">
+          <view class="weui-grid" hover-class="weui-grid_active" data-index="{{index}}" data-id="{{4}}" bindtap="click">
+            <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
+            <view class="weui-grid__label">{{'吼吼-' + index}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="indicator">
+  <block wx:for="{{swiperList}}">
+    <view class="swiper_item" style="background-color:{{index == currentTab?'#04b00f':'#aaaaaa'}};"></view>
+  </block>
+</view>
